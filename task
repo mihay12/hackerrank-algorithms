@@ -1,0 +1,48 @@
+//1 https://www.hackerrank.com/challenges/solve-me-first/problem
+
+function solveMeFirst(a, b) {
+  return a + b; 
+} 
+
+//2 https://www.hackerrank.com/challenges/simple-array-sum/problem
+
+function simpleArraySum(ar) {
+    let sumArray = 0
+    
+    for(let i = 0; i < ar.length; i++) {
+        sumArray += ar[i];
+    }
+    
+    return sumArray;
+}
+
+//3 https://www.hackerrank.com/challenges/compare-the-triplets/problem
+
+function compareTriplets(a, b) {
+
+    let score = [0, 0];
+    
+    for(let i = 0; i < a.length; i++) {
+        if(a[i] > b[i]) {
+            score[0] += 1;
+        }
+        if(a[i] < b[i]) {
+            score[1] += 1;
+        }
+    }
+    
+    return score;
+}
+
+
+//4 https://www.hackerrank.com/challenges/a-very-big-sum/problem
+
+function aVeryBigSum(array) {
+    let sumVeryBigArray = 0;
+
+    for(let i = 0; i < array.length;i++){
+        sumVeryBigArray += array[i];
+    }
+    
+    return sumVeryBigArray;
+}
