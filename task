@@ -72,4 +72,27 @@ function plusMinus(arr) {
     console.log(zero/arr.length);
 }
 
+//6. https://www.hackerrank.com/challenges/staircase/problem?h_r=next-challenge&h_v=zen
 
+function staircase(n) {
+    const reshitka = '#',
+        probil = ' ';
+//1
+    for (let i = 1; i < n; i++) {
+        console.log(probil.repeat(n-i-1), reshitka.repeat(i));
+    }
+// 2     
+//     let i = 1;
+//     do {
+//         console.log(probil.repeat(n-i-1), reshitka.repeat(i));
+//         i++;
+//     } while (i < n)
+//3 
+//     let i = 1;
+//     while (i < n) {
+//         console.log(probil.repeat(n-i-1), reshitka.repeat(i));
+//         i++;
+//     }
+
+    console.log(reshitka.repeat(n))
+}
