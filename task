@@ -46,3 +46,30 @@ function aVeryBigSum(array) {
     
     return sumVeryBigArray;
 }
+
+//5. https://www.hackerrank.com/challenges/plus-minus/problem
+
+function plusMinus(arr) {
+    
+    let negativeNumber = 0,
+        zero = 0,
+        positiveNumber = 0;
+    
+    for (let i = 0; i < arr.length; i++) {
+        if (arr[i] < 0) {
+            negativeNumber += 1;
+        }
+        if (arr[i] > 0) {
+            positiveNumber += 1;
+        } 
+        if (arr[i] === 0) {
+            zero += 1;    
+        }
+    }
+    
+    console.log(positiveNumber/arr.length);
+    console.log(negativeNumber/arr.length);
+    console.log(zero/arr.length);
+}
+
+
