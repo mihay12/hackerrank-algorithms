@@ -96,3 +96,67 @@ function staircase(n) {
 
     console.log(reshitka.repeat(n))
 }
+
+//7 https://www.hackerrank.com/challenges/mini-max-sum/problem
+//7.1
+
+function miniMaxSum(arr) {
+    arr.sort( (a, b) => {
+        if (a > b) return 1;
+        if (a < b) return -1;
+        else return 0;
+    });
+    
+    let sumMini = 0,
+        sumMax = 0;
+    const arrMini = [...arr],
+        arrMax = [...arr];
+          
+    arrMini.pop();
+    for (let i = 0; i < arrMini.length; i++){
+        sumMini += arrMini[i];
+    }
+
+    arrMax.shift();
+    for (let i = 0; i < arrMax.length; i++){
+        sumMax += arrMax[i];
+    }
+    console.log(sumMini, sumMax);
+}
+
+//7.2
+function miniMaxSum(arr) {
+let sumMini = 0,
+        sumMax = 0,
+        posMinEl = 0,
+        posMaxEl = 0;
+    const arrMax = [...arr],
+        arrMini = [...arr];
+    
+    for (let i = 0; i < arr.length; i++) {
+        let firstMinEl = arr[0],
+            firstMaxEl = arr[0];
+            
+        if (firstMinEl > arr[i]) {
+            firstMinEl = arr[i];
+            posMinEl = i;
+        }
+        
+        if (firstMaxEl < arr[i]) {
+            firstMaxEl = arr[i];
+            posMaxEl = i;
+        }
+    }
+
+    let delMaxEl = arrMini.splice(posMaxEl, 1);
+    for (let i = 0; i < arrMini.length; i++) {
+        sumMini += arrMini[i];
+    }
+
+    arrMax.splice(posMinEl, 1).unshift(delMaxEl);
+    for (let i = 0; i < arrMax.length; i++) {
+        sumMax += arrMax[i];
+    }
+    
+    console.log(sumMini, sumMax);
+}
