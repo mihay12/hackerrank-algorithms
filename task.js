@@ -220,4 +220,31 @@ function countApplesAndOranges(startHome, endHome, locatedAppleTree, locatedOran
     console.log(countOrange);
 }
 
-//11
+//11 https://www.hackerrank.com/challenges/time-conversion/problem
+
+function timeConversion(s) {
+    let time = s.slice(0,8);
+    
+    if(s.slice(8) === 'PM'){
+        time = time.split(":");
+        time[0] = Number(time[0]) + 12;
+        time = time.toString();
+        time = time.replace(',', ':');
+        time = time.replace(',', ':');
+        if (time.slice(0,2) === '24') {
+            time = time.replace('24', '12');
+        }
+    }
+    
+    if(s.slice(8) === 'AM' && s.slice(0,2) === '12'){
+        time = time.split(":");
+        time = time.toString();
+        time = time.replace('12', '00');
+        time = time.replace(',', ':');
+        time = time.replace(',', ':');
+    }
+    
+    return time;
+}
+
+//12
