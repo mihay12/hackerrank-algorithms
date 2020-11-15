@@ -247,4 +247,26 @@ function timeConversion(s) {
     return time;
 }
 
-//12
+//12 https://www.hackerrank.com/challenges/diagonal-difference/problem
+
+function diagonalDifference(arr) {
+    let differenceDiagonal = 0,
+        sumMainDiagonal = 0,
+        sumOpossiteDiagonal = 0;
+        
+    for (let i = 0; i < arr.length; i++) {
+        for (let j = 0; j < arr.length; j++){
+            if (i === j) {
+                sumMainDiagonal += arr[i][j];   
+            }
+            
+            if (i === arr.length - j - 1) {
+                sumOpossiteDiagonal += arr[i][j];
+            }
+        }
+    }
+    
+    differenceDiagonal = Math.abs(sumMainDiagonal - sumOpossiteDiagonal);
+    
+    return differenceDiagonal;
+}
