@@ -193,4 +193,31 @@ function gradingStudents(grades) {
     return grades;
 }
 
-//10
+//10 https://www.hackerrank.com/challenges/apple-and-orange/problem?h_r=next-challenge&h_v=zen
+
+function countApplesAndOranges(startHome, endHome, locatedAppleTree, locatedOrangeTree, apples, oranges) {
+    let countApple = 0,
+        countOrange = 0,
+        placeFallApple = 0,
+        placeFallOrange = 0;
+        
+    for (let i = 0; i < apples.length; i++) {
+        placeFallApple = apples[i] + locatedAppleTree;
+        
+        if (placeFallApple >= startHome && placeFallApple <= endHome) {
+            countApple++;
+        }
+    }
+    
+    for (let i = 0; i < oranges.length; i++) {
+        placeFallOrange = oranges[i] + locatedOrangeTree;
+        
+        if ( placeFallOrange >= startHome && placeFallOrange <= endHome) {
+            countOrange++;
+        }
+    }
+    console.log(countApple);
+    console.log(countOrange);
+}
+
+//11
