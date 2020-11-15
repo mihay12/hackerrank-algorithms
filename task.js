@@ -129,14 +129,13 @@ function miniMaxSum(arr) {
 let sumMini = 0,
         sumMax = 0,
         posMinEl = 0,
-        posMaxEl = 0;
+        posMaxEl = 0,
+        firstMinEl = arr[0],
+        firstMaxEl = arr[0];
     const arrMax = [...arr],
         arrMini = [...arr];
     
-    for (let i = 0; i < arr.length; i++) {
-        let firstMinEl = arr[0],
-            firstMaxEl = arr[0];
-            
+    for (let i = 0; i < arr.length; i++) {     
         if (firstMinEl > arr[i]) {
             firstMinEl = arr[i];
             posMinEl = i;
@@ -159,4 +158,19 @@ let sumMini = 0,
     }
     
     console.log(sumMini, sumMax);
+}
+
+//8 https://www.hackerrank.com/challenges/birthday-cake-candles/problem
+
+function birthdayCakeCandles(candles) {
+    let longCandel = candles[0];
+    for (let i = 0; i < candles.length; i++) {
+        if (longCandel < candles[i]){
+            longCandel = candles[i];
+        }
+    }
+    
+    const countLongCandels = candles.filter( candel => candel === longCandel);
+    
+    return countLongCandels.length;
 }
