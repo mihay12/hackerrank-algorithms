@@ -270,3 +270,31 @@ function diagonalDifference(arr) {
     
     return differenceDiagonal;
 }
+
+//13 https://www.hackerrank.com/challenges/breaking-best-and-worst-records/problem
+
+function breakingRecords(scores) {
+    let minRecordScores = 0,
+        maxRecordScores = 0,
+        maxScores = scores[0],
+        minScores = scores[0],
+        resultScores = [];
+                
+        for (let i = 0; i < scores.length; i++) {
+            if (minScores < scores[i]) {
+                minRecordScores++;
+                minScores = scores[i];
+            }
+            if (maxScores > scores[i]) {
+                maxRecordScores++;
+                maxScores = scores[i];
+            }
+        }
+        
+        resultScores.push(minRecordScores);
+        resultScores.push(maxRecordScores);
+        
+        return resultScores;
+}
+
+//14
