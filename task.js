@@ -297,4 +297,19 @@ function breakingRecords(scores) {
         return resultScores;
 }
 
-//14
+//14 https://www.hackerrank.com/challenges/divisible-sum-pairs/problem
+
+function divisibleSumPairs(n, k, arr) {
+    let divisibleSumPairs = 0;
+    for (let i = 0; i < n; i++) {
+        for (let j = 0; j < n; j++) {
+            if(i < j) {
+                let sum = arr[i] + arr[j];
+                if (sum % k === 0) {
+                    divisibleSumPairs++;
+                }
+            }
+        }
+    }
+    return divisibleSumPairs;
+}
