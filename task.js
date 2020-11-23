@@ -313,3 +313,24 @@ function divisibleSumPairs(n, k, arr) {
     }
     return divisibleSumPairs;
 }
+
+//15 https://www.hackerrank.com/challenges/kangaroo/problem
+
+function kangaroo(x1, v1, x2, v2) {
+    if (v1 < v2 && x1 < x2) {
+        return 'NO';
+    }
+    
+    for (let i = 0; i <= 10000; i++){
+        x1 += v1;
+        x2 += v2;
+        
+        if (x1 === x2) {
+            return 'YES';
+        }
+    }
+    
+    return 'NO';
+}
+
+//16
