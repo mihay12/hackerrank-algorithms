@@ -333,4 +333,23 @@ function kangaroo(x1, v1, x2, v2) {
     return 'NO';
 }
 
-//16
+//16 https://www.hackerrank.com/challenges/bon-appetit/problem
+
+function bonAppetit(bill, k, b) {
+    let sum = 0;
+    
+    for(let i = 0; i < bill.length; i++) {
+        sum += bill[i];
+    }
+    
+    sum -= bill[k];
+    sum /= 2;
+    
+    if (b - sum === 0) {
+        console.log('Bon Appetit');
+    } else {
+        console.log(b - sum);
+    }
+}
+
+//17
