@@ -352,4 +352,31 @@ function bonAppetit(bill, k, b) {
     }
 }
 
-//17
+//17 https://www.hackerrank.com/challenges/sock-merchant/problem?h_r=next-challenge&h_v=zen
+
+function sockMerchant(n, ar) {
+    let result = {},
+    counterSocks = 0;
+    
+    for (let i = 0; i < n; i++) {
+      let a = ar[i];
+      if (result[a] !== undefined) {
+        result[a]++;
+      } else {
+        result[a] = 1;
+      }
+    }
+
+    for (let key in result) {
+      if (result[key] % 2 === 0) {
+          counterSocks += result[key] / 2;
+      } 
+      if (result[key] - 1 > 0 && (result[key] - 1) % 2 === 0) {
+        counterSocks += (result[key] - 1) / 2;;
+      }
+    }
+  
+    return counterSocks; 
+}
+
+//18
