@@ -379,4 +379,12 @@ function sockMerchant(n, ar) {
     return counterSocks; 
 }
 
-//18
+//18 https://www.hackerrank.com/challenges/cats-and-a-mouse/problem
+
+function catAndMouse(x, y, z) {
+    return Math.abs(x - z) < Math.abs(y - z) ? 'Cat A' :
+           Math.abs(x - z) > Math.abs(y - z) ? 'Cat B' : 
+           'Mouse C';
+}
+
+//19
