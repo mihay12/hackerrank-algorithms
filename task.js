@@ -422,4 +422,32 @@ function migratoryBirds(arr) {
   return finalArr[0];
 }
 
-//21
+//21 https://www.hackerrank.com/challenges/day-of-the-programmer/problem?h_r=next-challenge&h_v=zen
+//21.1
+function dayOfProgrammer(year) {
+  if (year == "1918") {
+    return `26.09.${year}`;
+  }
+  if (
+    year % 400 == 0 ||
+    (year % 4 == 0 && !(year % 100 == 0)) ||
+    (year < 1918 && year % 4 == 0)
+  ) {
+    return `12.09.${year}`;
+  }
+
+  return `13.09.${year}`;
+}
+
+//21.2
+function dayOfProgrammer(year) {
+  return year == "1918"
+    ? `26.09.${year}`
+    : year % 400 == 0 ||
+      (year % 4 == 0 && !(year % 100 == 0)) ||
+      (year < 1918 && year % 4 == 0)
+    ? `12.09.${year}`
+    : `13.09.${year}`;
+}
+
+//22
