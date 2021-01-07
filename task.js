@@ -387,4 +387,16 @@ function catAndMouse(x, y, z) {
            'Mouse C';
 }
 
-//19
+//19 https://www.hackerrank.com/challenges/extra-long-factorials/problem
+
+function generateNumberFactorial(n) {
+  n = BigInt(n);
+
+  return n === 0n ? 1n : n * generateNumberFactorial(n - 1n);
+};
+
+function extraLongFactorials(n) {
+    console.log(generateNumberFactorial(n).toString());
+}
+
+//20
