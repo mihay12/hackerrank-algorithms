@@ -399,4 +399,27 @@ function extraLongFactorials(n) {
     console.log(generateNumberFactorial(n).toString());
 }
 
-//20
+//20 https://www.hackerrank.com/challenges/migratory-birds/problem
+
+function migratoryBirds(arr) {
+  let max = arr[0];
+  let finalArr = arr.filter(i => i == 0);
+
+  for (let i = 0; i < arr.length; i++) {
+    if (max < arr[i]) {
+      max = arr[i];
+    }
+  }
+
+  for (let idx = 0; idx <= max; idx++){
+    let temArr = arr.filter(i => i == idx);
+
+    if (finalArr.length < temArr.length){
+      finalArr = [...temArr];
+    }
+  }
+
+  return finalArr[0];
+}
+
+//21
