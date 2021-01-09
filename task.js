@@ -498,4 +498,18 @@ function designerPdfViewer(h, word) {
     return maxNum * word.length;
 }
 
-//25
+//25 https://www.hackerrank.com/challenges/angry-professor/problem
+
+function angryProfessor(confirmCountStudent, arrayStudent) {
+    let countStudent = 0;
+    
+    for(let i = 0; i < arrayStudent.length; i++) {
+        if (arrayStudent[i] <= 0) {
+            countStudent++;
+        }    
+    }
+    
+    return countStudent < confirmCountStudent ? 'YES' : 'NO';
+}
+
+//26
