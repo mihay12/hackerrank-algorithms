@@ -450,4 +450,36 @@ function dayOfProgrammer(year) {
     : `13.09.${year}`;
 }
 
-//22
+//22 https://www.hackerrank.com/challenges/the-hurdle-race/problem
+
+function hurdleRace(k, height) {
+    let maxHeight = height[0];
+    
+    for (let i = 0; i < height.length; i++) {
+        if (maxHeight < height[i]) {
+            maxHeight = height[i];
+        }
+    }
+
+    return k > maxHeight ? 0 : maxHeight - k;
+}
+
+//23 https://www.hackerrank.com/challenges/utopian-tree/problem
+
+function utopianTree(n) {
+    let heightTree = 0;
+    
+    if (n === 0) return 1;
+    
+    for (let i = 0; i <= n; i++) {
+        if (i % 2 === 0) {
+            heightTree++;
+        }
+        
+        if (i % 2 !== 0) {
+            heightTree*=2;
+        }
+    }
+    
+    return heightTree;
+}
