@@ -483,3 +483,19 @@ function utopianTree(n) {
     
     return heightTree;
 }
+
+//24 https://www.hackerrank.com/challenges/designer-pdf-viewer/problem
+
+function designerPdfViewer(h, word) {
+    let maxNum = 0;
+    
+    for (let i = 0; i < word.length; i++) {
+        if (maxNum < h[word[i].charCodeAt(0) - 97]) {
+            maxNum = h[word[i].charCodeAt(0) - 97];
+        }
+    }
+
+    return maxNum * word.length;
+}
+
+//25
